@@ -39,7 +39,6 @@ RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ss
 
 
 #Build libreoffice
-RUN apt-get install -y gedit
 WORKDIR /source
 RUN apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev wget curl git
 RUN apt-get build-dep libreoffice -y
