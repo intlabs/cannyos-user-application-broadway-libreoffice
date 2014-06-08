@@ -48,7 +48,7 @@ echo ""
 #Startup script begins:
 
 #Start Broadway server
-broadwayd&
+broadwayd --port 80 &
 
 #Set GDK backend
 GDK_BACKEND=broadway

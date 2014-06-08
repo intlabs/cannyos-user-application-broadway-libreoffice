@@ -19,7 +19,7 @@
 #
 
 # Pull base image.
-FROM intlabs/dockerfile-cannyos-ubuntu-14_04-fuse
+FROM intlabs/cannyos-user-application-broadway-base
 
 # Set environment variables.
 ENV HOME /root
@@ -37,11 +37,6 @@ WORKDIR /
 #Allow remote root login with password
 RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && /etc/init.d/ssh restart
 
-#Install the broadway gtk3 ppa for ubuntu
-RUN add-apt-repository ppa:malizor/gtk-broadway -y
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install broadwayd -y
 
 #Build libreoffice
 RUN apt-get install -y gedit
