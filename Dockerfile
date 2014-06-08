@@ -60,7 +60,7 @@ RUN make
 #EXPOSE 22/tcp
 
 #HTTP (broadway)
-EXPOSE 8080/tcp
+EXPOSE 80/tcp
 
 #****************************************************
 #                                                   *
