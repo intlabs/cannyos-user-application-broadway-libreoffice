@@ -42,7 +42,14 @@ RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ss
 WORKDIR /CannyOS/Host
 RUN apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev wget curl git
 RUN apt-get build-dep libreoffice -y
-RUN git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
+RUN wget http://download.documentfoundation.org/libreoffice/src/4.2.5/libreoffice-4.2.5.1.tar.xz && \
+tar xvfJ libreoffice-4.2.5.1.tar.xz && \
+cd libreoffice* && \
+./autogen.sh --enable-gtk3 --without-java && \
+make && \
+make install
+
+#RUN git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
 #WORKDIR /CannyOS/Host/libreoffice
 #RUN ./autogen.sh --enable-gtk3 --without-java
 #RUN make
