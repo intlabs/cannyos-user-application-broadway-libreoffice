@@ -57,7 +57,7 @@ export GDK_BACKEND=broadway
 export SAL_USE_VCLPLUGIN=gtk3
 
 # If you want to edit the .ui files with glade first execute:
-export GLADE_CATALOG_SEARCH_PATH=/usr/local/lib/libreoffice/share/glade
+#export GLADE_CATALOG_SEARCH_PATH=/usr/local/lib/libreoffice/share/glade
 
 # Launch libreoffice
 /usr/local/lib/libreoffice/program/soffice &
