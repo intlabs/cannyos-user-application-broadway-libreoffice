@@ -43,12 +43,11 @@ WORKDIR /CannyOS/Host
 RUN apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev wget curl git
 RUN apt-get build-dep libreoffice -y
 RUN git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
-WORKDIR /CannyOS/Host/libreoffice
+#WORKDIR /CannyOS/Host/libreoffice
 #RUN ./autogen.sh --enable-gtk3 --without-java
 #RUN make
 #RUN mkdir -p /CannyOS/Application/
 #RUN cp -r -f /CannyOS/Host/libreoffice /CannyOS/Application/libreoffice
-
 
 
 #****************************************************

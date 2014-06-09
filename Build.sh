@@ -50,7 +50,7 @@ echo ""
 # Make shared directory on host
 sudo mkdir -p "/CannyOS/build/cannyos-user-application-broadway-libreoffice"
 # Ensure that there it is clear
-sudo rm -r -f "/CannyOS/build/cannyos-user-application-broadway-libreoffice/*"
+#sudo rm -r -f "/CannyOS/build/cannyos-user-application-broadway-libreoffice/*"
 
 # Remove any existing containers
 sudo docker stop cannyos-user-application-broadway-libreoffice
