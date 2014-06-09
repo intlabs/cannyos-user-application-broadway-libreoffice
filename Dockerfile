@@ -49,14 +49,6 @@ cd libreoffice* && \
 make && \
 make install
 
-#RUN git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
-#WORKDIR /CannyOS/Host/libreoffice
-#RUN ./autogen.sh --enable-gtk3 --without-java
-#RUN make
-#RUN mkdir -p /CannyOS/Application/
-#RUN cp -r -f /CannyOS/Host/libreoffice /CannyOS/Application/libreoffice
-
-
 #****************************************************
 #                                                   *
 #         ONLY PORT RULES BELLOW THIS               *

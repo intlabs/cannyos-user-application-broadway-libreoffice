@@ -45,13 +45,22 @@ echo "*                                                   *"
 echo "*****************************************************"
 echo ""
 
-#Startup script begins:
+# Startup script begins:
 
-#Start Broadway server
+# Start Broadway server
 broadwayd --port 80 &
 
-#Set GDK backend
-GDK_BACKEND=broadway
+# Set GDK backend
+export GDK_BACKEND=broadway
+
+
+export SAL_USE_VCLPLUGIN=gtk3
+
+# If you want to edit the .ui files with glade first execute:
+export GLADE_CATALOG_SEARCH_PATH=/usr/local/lib/libreoffice/share/glade
+
+# Launch libreoffice
+/usr/local/lib/libreoffice/program/soffice &
 
 echo ""
 echo "*****************************************************"
